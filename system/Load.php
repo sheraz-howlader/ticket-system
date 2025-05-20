@@ -4,11 +4,11 @@
             if ($rcvData == true) {
                 extract($rcvData);
             }
-           include 'app/views/'.$fileName.'.php';
+           include 'views/'.$fileName.'.php';
         }
 
         public function model($modelName){
-            include 'app/models/'.$modelName.'.php';
+            include 'app/Models/'.$modelName.'.php';
             return new $modelName();
          }
     }

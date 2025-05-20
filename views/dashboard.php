@@ -1,6 +1,6 @@
 <?php
 ob_start();
-$user = \App\helpers\Auth::user();
+$user = \App\Helpers\Auth::user();
 ?>
 
 <div class="tab-content">

@@ -1,4 +1,5 @@
 <?php
+
 class Route {
     private static $routes = [];
 
@@ -27,7 +28,7 @@ class Route {
             if ($route['method'] === $requestMethod && $route['path'] === $requestUri) {
                 list($controllerName, $methodName) = explode('@', $route['action']);
 
-                $controllerFile = "app/controllers/$controllerName.php";
+                $controllerFile = "app/Controllers/$controllerName.php";
                 if (file_exists($controllerFile)) {
                     include_once $controllerFile;
                     $controller = new $controllerName();
@@ -40,7 +41,7 @@ class Route {
 
         // if route or url not exist it will through 404 error
         //http_response_code(404);
-        //echo "404 Not Found";
-        header("Location: ".BASE_URL."/");
+        echo "404 Not Found";
+//        header("Location: ".BASE_URL."/");
     }
 }

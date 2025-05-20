@@ -1,7 +1,7 @@
 <?php
-$sql = "CREATE TABLE IF NOT EXISTS tickets (
+$sql = "CREATE TABLE IF NOT EXISTS departments (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30) NOT NULL,
+    name VARCHAR(30) NOT NULL
 )";
 
 $db->prepare($sql)->execute();
